@@ -7,9 +7,9 @@
 }
 header{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+   
     
 
 }
@@ -17,20 +17,28 @@ header{
 header img{
     width: 100%;
     min-height: 400px;
-    
+    height: 505px;
 }
 .header-title{
+    display: grid;
+    grid-template-columns:  1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     position: absolute;
- 
+    grid-template-areas: 
+    "left center1 right"
+    "left center right";
+}
+.header-text{
+    grid-area: center;
 }
 
 .header-title h1{
+    line-height: 50px;
     color: #FFFFFF;
     font-family: 'luckiest guy';
     font-size: 5vmax;
-
-
     text-align: center;
+
     
 
 }
@@ -58,9 +66,11 @@ h1{
     
 }
 p{
-    
+    line-height: 3vh;
 }
 .botoes{
+    margin-top: 15%;
+    margin-left: 15%;
     display: flex;
     flex-direction: row;
 }
@@ -78,6 +88,7 @@ p{
     border: 1px solid black;
 }
 .button-white{
+    margin: 0px 10px 15px 0px;
     background-color: #FFFFFF;
     color:  #23272A;
 }
@@ -95,8 +106,9 @@ p{
 section{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    gap: 50px;
+    
     
     
 
